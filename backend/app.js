@@ -8,7 +8,7 @@ const auth = require('./middlewares/auth');
 const { login, createUser } = require('./controllers/users');
 const NotFoundError = require('./middlewares/NotFoundError');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { corsValidation } = require('./middlewares/corsValidation');
+const { corsValidation, preFlightCorsVelidation } = require('./middlewares/corsValidation');
 
 const { PORT = 3000 } = process.env;
 const app = express();
@@ -22,6 +22,8 @@ app.use(express.json());
 
 app.use(requestLogger);
 app.use(errorLogger);
+
+app.use(preFlightCorsVelidation);
 
 app.use(corsValidation);
 
