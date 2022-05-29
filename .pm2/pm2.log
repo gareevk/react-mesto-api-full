@@ -1,0 +1,197 @@
+2022-05-27T16:50:38: PM2 log: ===============================================================================
+2022-05-27T16:50:38: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2022-05-27T16:50:38: PM2 log: Time                 : Fri May 27 2022 16:50:38 GMT+0000 (Coordinated Universal Time)
+2022-05-27T16:50:38: PM2 log: PM2 version          : 5.2.0
+2022-05-27T16:50:38: PM2 log: Node.js version      : 16.15.0
+2022-05-27T16:50:38: PM2 log: Current arch         : x64
+2022-05-27T16:50:38: PM2 log: PM2 home             : /home/gareevk/.pm2
+2022-05-27T16:50:38: PM2 log: PM2 PID file         : /home/gareevk/.pm2/pm2.pid
+2022-05-27T16:50:38: PM2 log: RPC socket file      : /home/gareevk/.pm2/rpc.sock
+2022-05-27T16:50:38: PM2 log: BUS socket file      : /home/gareevk/.pm2/pub.sock
+2022-05-27T16:50:38: PM2 log: Application log path : /home/gareevk/.pm2/logs
+2022-05-27T16:50:38: PM2 log: Worker Interval      : 30000
+2022-05-27T16:50:38: PM2 log: Process dump file    : /home/gareevk/.pm2/dump.pm2
+2022-05-27T16:50:38: PM2 log: Concurrent actions   : 2
+2022-05-27T16:50:38: PM2 log: SIGTERM timeout      : 1600
+2022-05-27T16:50:38: PM2 log: ===============================================================================
+2022-05-27T16:50:38: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T16:50:38: PM2 log: App [app:0] online
+2022-05-27T18:21:12: PM2 log: Stopping app:app id:0
+2022-05-27T18:21:12: PM2 log: App [app:0] exited with code [0] via signal [SIGINT]
+2022-05-27T18:21:12: PM2 log: pid=4618 msg=process killed
+2022-05-27T18:21:12: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T18:21:12: PM2 log: App [app:0] online
+2022-05-27T21:15:26: PM2 log: Stopping app:app id:0
+2022-05-27T21:15:26: PM2 log: App [app:0] exited with code [0] via signal [SIGINT]
+2022-05-27T21:15:26: PM2 log: pid=6229 msg=process killed
+2022-05-27T21:15:26: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:26: PM2 log: App [app:0] online
+2022-05-27T21:15:27: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:27: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:27: PM2 log: App [app:0] online
+2022-05-27T21:15:27: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:27: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:27: PM2 log: App [app:0] online
+2022-05-27T21:15:28: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:28: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:28: PM2 log: App [app:0] online
+2022-05-27T21:15:29: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:29: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:29: PM2 log: App [app:0] online
+2022-05-27T21:15:29: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:29: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:29: PM2 log: App [app:0] online
+2022-05-27T21:15:30: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:30: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:30: PM2 log: App [app:0] online
+2022-05-27T21:15:31: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:31: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:31: PM2 log: App [app:0] online
+2022-05-27T21:15:32: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:32: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:32: PM2 log: App [app:0] online
+2022-05-27T21:15:32: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:32: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:32: PM2 log: App [app:0] online
+2022-05-27T21:15:33: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:33: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:33: PM2 log: App [app:0] online
+2022-05-27T21:15:34: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:34: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:34: PM2 log: App [app:0] online
+2022-05-27T21:15:34: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:34: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:34: PM2 log: App [app:0] online
+2022-05-27T21:15:35: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:35: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:35: PM2 log: App [app:0] online
+2022-05-27T21:15:35: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:36: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:36: PM2 log: App [app:0] online
+2022-05-27T21:15:36: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:36: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T21:15:36: PM2 log: App [app:0] online
+2022-05-27T21:15:37: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T21:15:37: PM2 log: Script /home/gareevk/express-mesto-gha/app.js had too many unstable restarts (16). Stopped. "errored"
+2022-05-27T22:06:14: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:14: PM2 log: App [app:0] online
+2022-05-27T22:06:14: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:14: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:14: PM2 log: App [app:0] online
+2022-05-27T22:06:15: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:15: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:15: PM2 log: App [app:0] online
+2022-05-27T22:06:16: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:16: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:16: PM2 log: App [app:0] online
+2022-05-27T22:06:16: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:16: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:16: PM2 log: App [app:0] online
+2022-05-27T22:06:17: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:17: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:17: PM2 log: App [app:0] online
+2022-05-27T22:06:18: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:18: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:18: PM2 log: App [app:0] online
+2022-05-27T22:06:18: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:18: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:18: PM2 log: App [app:0] online
+2022-05-27T22:06:19: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:19: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:19: PM2 log: App [app:0] online
+2022-05-27T22:06:20: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:20: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:20: PM2 log: App [app:0] online
+2022-05-27T22:06:20: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:20: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:20: PM2 log: App [app:0] online
+2022-05-27T22:06:21: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:21: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:21: PM2 log: App [app:0] online
+2022-05-27T22:06:21: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:21: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:21: PM2 log: App [app:0] online
+2022-05-27T22:06:22: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:22: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:22: PM2 log: App [app:0] online
+2022-05-27T22:06:23: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:23: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:23: PM2 log: App [app:0] online
+2022-05-27T22:06:23: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:23: PM2 log: App [app:0] starting in -fork mode-
+2022-05-27T22:06:23: PM2 log: App [app:0] online
+2022-05-27T22:06:24: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-27T22:06:24: PM2 log: Script /home/gareevk/express-mesto-gha/app.js had too many unstable restarts (16). Stopped. "errored"
+2022-05-29T09:22:00: PM2 log: pm2 has been killed by signal, dumping process list before exit...
+2022-05-29T09:22:00: PM2 log: Deleting process 0
+2022-05-29T09:22:00: PM2 log: Stopping app:app id:0
+2022-05-29T09:22:00: PM2 error: app=app id=0 does not have a pid
+2022-05-29T09:22:00: PM2 log: Exited peacefully
+2022-05-29T09:23:12: PM2 log: ===============================================================================
+2022-05-29T09:23:12: PM2 log: --- New PM2 Daemon started ----------------------------------------------------
+2022-05-29T09:23:12: PM2 log: Time                 : Sun May 29 2022 09:23:12 GMT+0000 (Coordinated Universal Time)
+2022-05-29T09:23:12: PM2 log: PM2 version          : 5.2.0
+2022-05-29T09:23:12: PM2 log: Node.js version      : 16.15.0
+2022-05-29T09:23:12: PM2 log: Current arch         : x64
+2022-05-29T09:23:12: PM2 log: PM2 home             : /home/gareevk/.pm2
+2022-05-29T09:23:12: PM2 log: PM2 PID file         : /home/gareevk/.pm2/pm2.pid
+2022-05-29T09:23:12: PM2 log: RPC socket file      : /home/gareevk/.pm2/rpc.sock
+2022-05-29T09:23:12: PM2 log: BUS socket file      : /home/gareevk/.pm2/pub.sock
+2022-05-29T09:23:12: PM2 log: Application log path : /home/gareevk/.pm2/logs
+2022-05-29T09:23:12: PM2 log: Worker Interval      : 30000
+2022-05-29T09:23:12: PM2 log: Process dump file    : /home/gareevk/.pm2/dump.pm2
+2022-05-29T09:23:12: PM2 log: Concurrent actions   : 2
+2022-05-29T09:23:12: PM2 log: SIGTERM timeout      : 1600
+2022-05-29T09:23:12: PM2 log: ===============================================================================
+2022-05-29T09:23:12: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:12: PM2 log: App [app:0] online
+2022-05-29T09:23:17: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:17: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:17: PM2 log: App [app:0] online
+2022-05-29T09:23:17: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:17: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:17: PM2 log: App [app:0] online
+2022-05-29T09:23:18: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:18: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:18: PM2 log: App [app:0] online
+2022-05-29T09:23:19: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:19: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:19: PM2 log: App [app:0] online
+2022-05-29T09:23:19: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:19: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:19: PM2 log: App [app:0] online
+2022-05-29T09:23:20: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:20: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:20: PM2 log: App [app:0] online
+2022-05-29T09:23:21: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:21: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:21: PM2 log: App [app:0] online
+2022-05-29T09:23:21: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:21: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:21: PM2 log: App [app:0] online
+2022-05-29T09:23:22: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:22: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:22: PM2 log: App [app:0] online
+2022-05-29T09:23:23: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:23: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:23: PM2 log: App [app:0] online
+2022-05-29T09:23:23: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:23: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:23: PM2 log: App [app:0] online
+2022-05-29T09:23:24: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:24: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:24: PM2 log: App [app:0] online
+2022-05-29T09:23:25: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:25: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:25: PM2 log: App [app:0] online
+2022-05-29T09:23:25: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:25: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:25: PM2 log: App [app:0] online
+2022-05-29T09:23:26: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:26: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:26: PM2 log: App [app:0] online
+2022-05-29T09:23:27: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:27: PM2 log: App [app:0] starting in -fork mode-
+2022-05-29T09:23:27: PM2 log: App [app:0] online
+2022-05-29T09:23:27: PM2 log: App [app:0] exited with code [1] via signal [SIGINT]
+2022-05-29T09:23:27: PM2 log: Script /home/gareevk/express-mesto-gha/app.js had too many unstable restarts (16). Stopped. "errored"
