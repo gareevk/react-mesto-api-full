@@ -1,0 +1,17 @@
+.elements__thrash-can {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-image: url('../../../images/thrash-can.svg');
+    z-index: 10;
+    width: 18px;
+    height: 19px;
+    border: 0;
+    background-color: transparent;
+    cursor: pointer;
+    transition: opacity 0.1s linear;
+}
+
+.elements__thrash-can:hover {
+    opacity: 0.6;
+}

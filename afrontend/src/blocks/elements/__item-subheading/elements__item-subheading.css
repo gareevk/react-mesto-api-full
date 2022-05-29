@@ -1,0 +1,12 @@
+.elements__item-subheading {
+    width: 246px;
+    height: 23px;
+    display: flex;
+    margin-left: 21px;
+    margin-top: 25px;
+    margin-bottom: 31px;
+    margin-right: 38px;
+    justify-content: space-between;
+    align-items: center;
+    border: 0;
+}

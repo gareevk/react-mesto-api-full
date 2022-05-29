@@ -1,0 +1,18 @@
+.profile__bio {
+    display: grid;
+    grid-template-columns: 294px 24px;
+    grid-template-rows: 48px 20px;
+    column-gap: 18px;
+    row-gap: 7px;
+    align-content: center;
+}
+
+@media screen and (max-width: 768px) {
+    .profile__bio {
+        grid-template-columns: 189px 18px;
+        grid-template-rows: 34px 15px;
+        column-gap: 10px;
+        row-gap: 14px;
+        text-align: center;
+    }
+}

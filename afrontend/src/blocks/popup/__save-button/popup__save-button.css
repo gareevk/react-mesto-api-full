@@ -1,0 +1,33 @@
+.popup__save-button {
+    background: #000000;
+    border-radius: 2px;
+    width: 358px;
+    height: 50px;
+    color: #FFFFFF;
+    cursor: pointer;
+    text-align: center;
+    transition: opacity 0.1s linear;
+    font-family: 'Inter', 'Arial', 'Helvetica', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    border: 0;
+    position: relative;
+}
+
+@media screen and (max-width: 580px) {
+    .popup__save-button {
+        width: 238px;
+        height: 46px;
+        margin: 15px auto 25px;
+    }
+}
+
+.popup__save-button:hover {
+    opacity: 0.8;
+    content: 'PENIS';
+}
+

@@ -1,0 +1,6 @@
+.infoTooltip_opened {
+    transition: all .5s linear;
+    opacity: 1;
+    z-index: 1000;
+    visibility: visible;
+}

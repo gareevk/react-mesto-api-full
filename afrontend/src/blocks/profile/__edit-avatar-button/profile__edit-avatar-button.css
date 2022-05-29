@@ -1,0 +1,19 @@
+.profile__edit-avatar-button {
+    height: 120px;
+    width: 120px;
+    border-radius: 50%;
+    margin-right: 30px;
+    padding: 0;
+    border: 0;
+    background-color: black;
+    cursor: pointer;
+    position: relative;
+}
+
+.profile__edit-avatar-button:hover > .profile__avatar {
+    opacity: 0.2;
+}
+
+.profile__edit-avatar-button:hover > .profile__edit-avatar-icon {
+    display: block;
+}

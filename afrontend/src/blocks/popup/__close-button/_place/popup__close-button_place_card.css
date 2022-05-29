@@ -1,0 +1,5 @@
+.popup__close-button_place_card {
+    position: absolute;
+    right: -40px;
+    top: -40px;
+}
