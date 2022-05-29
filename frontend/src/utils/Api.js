@@ -8,7 +8,7 @@ class Api {
     constructor( apiConfig ) {
         this._userToken = apiConfig.userToken;
 
-        this._baseUrl = 'https://mesto.nomoreparties.co/v1/cohort36/';
+        this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
     }
 
     _checkResponse = (res) => {
