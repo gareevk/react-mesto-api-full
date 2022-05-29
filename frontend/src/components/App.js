@@ -41,9 +41,8 @@ function App() {
     }, [loggedIn]);
 
     React.useEffect( () => {
-        
-        getInitialCards();
         getUserInfo();
+        getInitialCards();
         const closeByEscape = (e) => {
             if (e.key === 'Escape') {
               closeAllPopups();
@@ -230,8 +229,6 @@ function App() {
         setTooltipMessage('');
     }
     
-    
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
         

@@ -2,7 +2,7 @@
 /* eslint-disable linebreak-style */
 const allowedCors = require('../utils/allowedCors');
 
-const corsOptions = {
+module.exports.corsOptions = {
   origin: function (origin, callback) {
     if (allowedCors.indexOf(origin) !== -1) {
       callback(null, true);
@@ -20,5 +20,3 @@ module.exports.corsValidation = (req, res, next) => {
 
   next();
 };
-
-module.exports = corsOptions;
