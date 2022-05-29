@@ -9,12 +9,15 @@ const auth = require('./middlewares/auth');
 const { login, createUser } = require('./controllers/users');
 const NotFoundError = require('./middlewares/NotFoundError');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
-const { corsValidation, preFlightCorsVelidation } = require('./middlewares/corsValidation');
+const { corsValidation } = require('./middlewares/corsValidation');
 
 const { PORT = 3000 } = process.env;
 const app = express();
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://avocado.nomoredomains.xyz',
+  credentials: true,
+}));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -25,8 +28,6 @@ app.use(express.json());
 
 app.use(requestLogger);
 app.use(errorLogger);
-
-app.use(preFlightCorsVelidation);
 
 app.use(corsValidation);
 
