@@ -41,9 +41,8 @@ function App() {
     }, [loggedIn]);
 
     React.useEffect( () => {
-        
-        getInitialCards();
         getUserInfo();
+        getInitialCards();
         const closeByEscape = (e) => {
             if (e.key === 'Escape') {
               closeAllPopups();
@@ -87,7 +86,10 @@ function App() {
     
     function getUserInfo() {
         api.getUserInfo()
-        .then( user => setCurrentUser( user) )
+        .then( user => {
+            console.log(user);
+            setCurrentUser( user);
+        } )
         .catch( (err) => console.log('Ошибка, загрузка профиля не удалась: '+ err) );
     }
     
@@ -178,7 +180,6 @@ function App() {
         .then( res => {
             console.log(res);
             if (res.token) {
-                
                 setLoggedIn(true);
                 handleTokenCheck();
                 history.push('/');
@@ -230,8 +231,6 @@ function App() {
         setTooltipMessage('');
     }
     
-    
-
   return (
     <CurrentUserContext.Provider value={currentUser}>
         

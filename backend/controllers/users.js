@@ -3,10 +3,13 @@
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 const User = require('../models/user');
+require('dotenv').config();
 const BadRequestError = require('../middlewares/BadRequestError');
 const NotFoundError = require('../middlewares/NotFoundError');
 const UnauthorizedError = require('../middlewares/UnauthorizedError');
 const ConflictError = require('../middlewares/ConflictError');
+
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports.getUsers = (req, res, next) => {
   User.find({})
@@ -105,7 +108,7 @@ module.exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
     const user = await User.findUserByCredentials(email, password);
-    res.send({ token: jwt.sign({ _id: user._id }, 'super-strong-secret', { expiresIn: '7d' }) });
+    res.send({ token: jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' }) });
   } catch (err) {
     next(new UnauthorizedError('Неверный логин или пароль'));
   }

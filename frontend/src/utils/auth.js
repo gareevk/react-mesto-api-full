@@ -1,3 +1,4 @@
+//const BASE_URL = 'http://localhost:3000';
 const BASE_URL = 'https://api.avocado.nomoreparties.sbs';
 
 export const register = (email, password) => {
