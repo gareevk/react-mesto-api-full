@@ -8,11 +8,12 @@ class Api {
     constructor( apiConfig ) {
         this._userToken = apiConfig.userToken;
 
-        //this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
-        this._baseUrl = 'http://localhost:3000/'
+        this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
+        //this._baseUrl = 'http://localhost:3000/'
     }
 
     _checkResponse = (res) => {
+        console.log(res);
         if (res.ok) {
             return res.json();
           }

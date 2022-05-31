@@ -86,7 +86,10 @@ function App() {
     
     function getUserInfo() {
         api.getUserInfo()
-        .then( user => setCurrentUser( user) )
+        .then( user => {
+            console.log(user);
+            setCurrentUser( user);
+        } )
         .catch( (err) => console.log('Ошибка, загрузка профиля не удалась: '+ err) );
     }
     
@@ -177,7 +180,6 @@ function App() {
         .then( res => {
             console.log(res);
             if (res.token) {
-                
                 setLoggedIn(true);
                 handleTokenCheck();
                 history.push('/');
