@@ -3,13 +3,14 @@ import {
     avatarPopupSubmitButton,
     addCardPopupSubmitButton,
 } from './constants';
+import React from 'react';
 
 class Api {
     constructor( apiConfig ) {
         this._userToken = apiConfig.userToken;
 
-        this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
-        //this._baseUrl = 'http://localhost:3000/'
+        //this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
+        this._baseUrl = 'http://localhost:3000/'
     }
 
     _checkResponse = (res) => {
@@ -79,7 +80,7 @@ class Api {
             this._baseUrl + 'cards', 
             {
                 method: 'GET',
-                headers: { authorization: this._userToken }
+                headers: { authorization: this._userToken },
             })
             .then( this._checkResponse)
 
@@ -91,8 +92,10 @@ class Api {
             this._baseUrl + 'cards',
             {
                 method: 'POST',
-                headers: {authorization: this._userToken,
-                'Content-Type': 'application/json' },
+                headers: {
+                    Accept: 'application/json',
+                    authorization: this._userToken,
+                    'Content-Type': 'application/json', },
                 body: JSON.stringify({
                     name: formInput.name,
                     link: formInput.link
@@ -116,9 +119,11 @@ class Api {
         return fetch(
             this._baseUrl + 'users/me',
             {
-            method: 'GET',
+            //method: 'GET',
             headers: {
-              authorization: this._userToken, 'Content-Type': 'application/json'
+                //Accept: 'application/json',
+                authorization: this._userToken,
+                'Content-Type': 'application/json',
             },
             }
         )
@@ -126,6 +131,8 @@ class Api {
     } 
 }
 
-const api = new Api( {userToken: '29b7c506-9f8b-4a60-9054-462b94d7dbca'} );
+const token = localStorage.getItem('jwt');
+console.log(`токен: ${token}`);
+const api = new Api( { userToken: token } );
 
 export default api;
