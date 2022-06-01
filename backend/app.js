@@ -15,8 +15,14 @@ const corsOptions = require('./middlewares/corsValidation');
 const { PORT = 3000 } = process.env;
 const app = express();
 
-app.use(cors());
-app.use(corsValidation);
+app.use(cors({
+  origin: 'http://localhost:3001',
+  credentials: true,
+}));
+
+//app.options('*', cors());
+//app.use(cors());
+//app.use(corsValidation);
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
