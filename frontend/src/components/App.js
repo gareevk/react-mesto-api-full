@@ -29,34 +29,40 @@ function App() {
     const [successSubmitStatus, setSuccessSubmitStatus] = React.useState( false );
     const [tooltipMessage, setTooltipMessage] = React.useState('');
     const history = useHistory();
-    
-    /*
-    console.log(
-        'loggedIn: ' + loggedIn + '      token: ' + localStorage.getItem('jwt')
-    );
-    */
 
     React.useEffect(() => {
         handleTokenCheck();
-    }, [loggedIn]);
+    }, [handleTokenCheck, loggedIn]);
 
     React.useEffect( () => {
-        getUserInfo();
-        getInitialCards();
-        const closeByEscape = (e) => {
+        if (loggedIn) {
+            getUserInfo();
+            getInitialCards();
+            const closeByEscape = (e) => {
             if (e.key === 'Escape') {
               closeAllPopups();
             }
+            }
+            document.addEventListener('keydown', closeByEscape);
+            return () => document.removeEventListener('keydown', closeByEscape);
         }
-        document.addEventListener('keydown', closeByEscape);
-        return () => document.removeEventListener('keydown', closeByEscape);
-    }, []);
+        
+    }, [loggedIn]);
 
     function handleCardLike(card) {
-        const isLiked = card.likes.some(i => i._id === currentUser._id);
+        const isLiked = card.likes.some(i => i === currentUser._id);
         api.likeCard(!isLiked, card._id)
         .then((newCard) => {
-            setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
+            const item = newCard.data;
+            setCards(
+                (state) => {
+                    const cardsArray = state.map((c) => 
+                        c._id === card._id ? item : c
+                    );
+                    return cardsArray;
+                }
+            );
+            
         })
         .catch( err => console.log('Ошибка в загрузке лайков:' + err));
     }
@@ -79,7 +85,7 @@ function App() {
     function getInitialCards() {
         return api.getInitialCards()
                 .then( (res) => {
-                    setCards(res);
+                    setCards(res.data);
                 })
                 .catch( (err) => console.log('Ошибка, загрузка информации не удалась: '+ err) );
     }
@@ -88,7 +94,7 @@ function App() {
         api.getUserInfo()
         .then( user => {
             console.log(user);
-            setCurrentUser( user);
+            setCurrentUser( user.data);
         } )
         .catch( (err) => console.log('Ошибка, загрузка профиля не удалась: '+ err) );
     }
@@ -120,7 +126,7 @@ function App() {
         setSubmitButtonMessage('Сохранение...');
         api.setProfileInfo(name, description)
         .then( (user) => {
-            setCurrentUser(user);
+            setCurrentUser(user.data);
             closeAllPopups();
         })
         .catch( err => console.log('Обновление данных пользователя не удалось: ' + err))
@@ -132,7 +138,7 @@ function App() {
         setSubmitButtonMessage('Сохранение...');
         api.setAvatar(url)
         .then( user => {
-            setCurrentUser(user);
+            setCurrentUser(user.data);
             closeAllPopups();
         } )
         .catch( err => console.log('Обновление аватара не удалось: ' + err))
@@ -144,7 +150,7 @@ function App() {
         setSubmitButtonMessage('Сохранение...');
         api.addCard(url)
         .then( card => {
-            setCards([card, ...cards]);
+            setCards([card.data, ...cards]);
             closeAllPopups();
         })
         .catch( err => console.log('Загрузка карточки не удалась: ' + err))
@@ -157,6 +163,7 @@ function App() {
             auth.checkToken(jwt)
             .then( data => {
                 if (data) {
+                    console.log(data);
                     setLoggedIn(true);
                     setEmail(data.data.email);
                     history.push('/');

@@ -3,14 +3,17 @@ import {
     avatarPopupSubmitButton,
     addCardPopupSubmitButton,
 } from './constants';
-import React from 'react';
 
 class Api {
-    constructor( apiConfig ) {
-        this._userToken = apiConfig.userToken;
+    constructor() {
+        this._userToken = `Bearer ${localStorage.getItem('jwt')}`;
 
         this._baseUrl = 'https://api.avocado.nomoreparties.sbs/';
         //this._baseUrl = 'http://localhost:3000/'
+    }
+
+    _updateToken() {
+        this._userToken = `Bearer ${localStorage.getItem('jwt')}`;
     }
 
     _checkResponse = (res) => {
@@ -42,7 +45,7 @@ class Api {
                 headers: {
                     authorization: this._userToken,
                     'Content-Type': 'application/json'
-                }                
+                },            
             })
             .then( this._checkResponse)
         } else {
@@ -51,7 +54,7 @@ class Api {
                 headers: {
                     authorization: this._userToken,
                     'Content-Type': 'application/json'
-                }
+                },
             })
             .then( this._checkResponse)
         }
@@ -76,26 +79,29 @@ class Api {
     }
 
     getInitialCards() {
+        this._updateToken();
         return fetch(
             this._baseUrl + 'cards', 
             {
                 method: 'GET',
-                headers: { authorization: this._userToken },
+                headers: { 
+                    authorization: this._userToken,
+                    'Content-Type': 'application/json',
+                },
             })
             .then( this._checkResponse)
 
     }
 
     addCard(formInput) {
-        console.log(formInput);
         return fetch(
             this._baseUrl + 'cards',
             {
                 method: 'POST',
                 headers: {
-                    Accept: 'application/json',
                     authorization: this._userToken,
-                    'Content-Type': 'application/json', },
+                    'Content-Type': 'application/json', 
+                },
                 body: JSON.stringify({
                     name: formInput.name,
                     link: formInput.link
@@ -109,30 +115,30 @@ class Api {
         return fetch( this._baseUrl + 'users/me/avatar',
         {
             method: 'PATCH',
-            headers: { authorization: this._userToken, 'Content-Type': 'application/json'},
+            headers: { 
+                authorization: this._userToken, 
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ avatar: avatarLink})
         })
         .then( this._checkResponse)
     }
 
     getUserInfo() {
+        this._updateToken();
         return fetch(
             this._baseUrl + 'users/me',
             {
-            //method: 'GET',
-            headers: {
-                //Accept: 'application/json',
-                authorization: this._userToken,
-                'Content-Type': 'application/json',
-            },
+                headers: {
+                    authorization: this._userToken,
+                    'Content-Type': 'application/json',
+                },
             }
         )
         .then( this._checkResponse)
     } 
 }
 
-const token = localStorage.getItem('jwt');
-console.log(`токен: ${token}`);
-const api = new Api( { userToken: token } );
+const api = new Api();
 
 export default api;

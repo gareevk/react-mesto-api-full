@@ -108,7 +108,6 @@ module.exports.login = async (req, res, next) => {
   const { email, password } = req.body;
   try {
     const user = await User.findUserByCredentials(email, password);
-    console.log(JWT_SECRET);
     res.send({ token: jwt.sign({ _id: user._id }, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret', { expiresIn: '7d' }) });
   } catch (err) {
     next(new UnauthorizedError('Неверный логин или пароль'));
@@ -117,7 +116,6 @@ module.exports.login = async (req, res, next) => {
 
 module.exports.getCurrentUser = (req, res, next) => {
   const { _id } = req.user;
-  console.log(req.headers);
   User.findById(_id)
     .then((user) => {
       if (!user) {
