@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React from 'react';
 import { Route, Switch, Redirect, useHistory } from 'react-router-dom';
 import PopupWithForm from './PopupWithForm.js';
@@ -71,6 +72,7 @@ function App() {
         api.deleteCard(cardId)
         .then( () => {
             setCards( () => {
+                // eslint-disable-next-line array-callback-return
                 const newCards = cards.filter( (element) => {
                     if (element._id !== cardId) {
                         return element;
