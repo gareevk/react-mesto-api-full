@@ -1,9 +1,3 @@
-import {
-    profilePopupSubmitButton,
-    avatarPopupSubmitButton,
-    addCardPopupSubmitButton,
-} from './constants';
-
 class Api {
     constructor() {
         this._userToken = `Bearer ${localStorage.getItem('jwt')}`;
